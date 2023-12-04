@@ -172,16 +172,17 @@ def AES_Encrypt(text, round_keys):
     return cipher_text
 
 
-def AES_Encryption(plain_text, round_keys):
+def AES_Encryption(plain_text, round_keys,mainIV):
     global iv
     iv = bytearray(os.urandom(BLOCK_SIZE))
+    
 
     plain_text = str_to_hex(plain_text)
 
     factor = len(plain_text) // BLOCK_SIZE
     cipher_text = bytearray()
 
-    xor_block = iv
+    xor_block = mainIV
 
     for i in range(int(factor)):
         # XOR the current block with the previous ciphertext block or IV
@@ -258,7 +259,7 @@ def AES_Decrypt(text, round_keys):
     return plain_text
 
 
-def AES_Decryption(cipher_text, round_keys):
+def AES_Decryption(cipher_text, round_keys,mainIV):
 
     if type(cipher_text) is str:
         cipher_text = str_to_hex(cipher_text)
@@ -266,7 +267,7 @@ def AES_Decryption(cipher_text, round_keys):
     factor = len(cipher_text) // BLOCK_SIZE
     plain_text = bytearray()
 
-    xor_block = iv
+    xor_block = mainIV
 
     for i in range(int(factor)):
         decrypted_block = AES_Decrypt(cipher_text[i*BLOCK_SIZE:(i+1)*BLOCK_SIZE], round_keys)
