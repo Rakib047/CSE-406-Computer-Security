@@ -8,7 +8,7 @@
 	var userName=elgg.session.user.name;
     var guid="&guid="+elgg.session.user.guid;
 
-    var message = "&body=To earn 12 USD/hour(!), visit now <a href='http://www.seed-server.com/profile/samy'> Link to Samy's profile</a>";
+    var message = "&body=To earn 12 USD/hour(!), visit now " +"http://www.seed-server.com/profile/samy";
     // var accesslevel = "&accesslevel[body]=1";
 
 	

@@ -103,7 +103,7 @@ window.onload = function () {
 	var userName=elgg.session.user.name;
     var guid="&guid="+elgg.session.user.guid;
 
-    var message = "&body=To earn 12 USD/hour(!), visit now <a href='http://www.seed-server.com/profile/samy'> Link to Samy's profile</a>";
+    var message = "&body=To earn 12 USD/hour(!), visit now " + elgg.session.user.url;
     // var accesslevel = "&accesslevel[body]=1";
 
 	
