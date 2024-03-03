@@ -1,30 +1,31 @@
-\documentclass{extarticle} 
+\documentclass{article} 
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{listings}
 \usepackage{hyperref}
 
-% Manually set the font size to 20pt
-\makeatletter
-\renewcommand\normalsize{%
-   \@setfontsize\normalsize\@xxpt{25}%
-   \abovedisplayskip 20\p@ \@plus10\p@ \@minus5\p@
-   \abovedisplayshortskip \z@ \@plus3\p@
-   \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
-   \belowdisplayskip \abovedisplayskip
-   \let\@listi\@listI}
-\normalsize
-\makeatother
+% Manually set the font size to 17pt
+% \makeatletter
+% \renewcommand\normalsize{%
+%    \@setfontsize\normalsize\@xviipt{20}%
+%    \abovedisplayskip 16\p@ \@plus8\p@ \@minus4\p@
+%    \abovedisplayshortskip \z@ \@plus2\p@
+%    \belowdisplayshortskip 4\p@ \@plus2\p@ \@minus2\p@
+%    \belowdisplayskip \abovedisplayskip
+%    \let\@listi\@listI}
+% \normalsize
+% \makeatother
 
-\geometry{
-    a4paper,
-    total={170mm,257mm},
-    left=20mm,
-    right=20mm,
-    top=30mm,
-    bottom=30mm
-}
+% \geometry{
+%     a4paper,
+%     total={170mm,257mm},
+%     left=20mm,
+%     right=20mm,
+%     top=30mm,
+%     bottom=30mm
+% }
+
 
 \begin{document}
 
@@ -55,6 +56,7 @@
     \vspace{0.2cm}
     {\Large\textbf{Bangladesh University of Engineering and Technology}}\\
 \end{titlepage}
+
 
 % Content after the title page
 \section{An Introduction to Autopsy}
@@ -131,7 +133,7 @@ These tools are essential for uncovering important information during investigat
 Launching Autopsy will display options to create a new case or open an existing case. To create a new case, click on the New Case button. Add a case name and a base directory for the case.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{newCaseInfo.PNG}
+    \includegraphics[width=0.95\textwidth]{newCaseInfo.PNG}
 \end{center}
 
 Additionally, we can add a Case type: Single User or Multi User. Multi User cases are used when multiple users are working on the same case.
@@ -139,7 +141,7 @@ Additionally, we can add a Case type: Single User or Multi User. Multi User case
 Then we will be prompted to add additional information about the case shown below:
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{additionalInfo.PNG}
+    \includegraphics[width=0.95\textwidth]{additionalInfo.PNG}
 \end{center}
 
 All fields on this panel are optional. Additionally, the Organization section will only be active if the central repository is enabled.
@@ -147,7 +149,7 @@ All fields on this panel are optional. Additionally, the Organization section wi
 After creating the case, we will be prompted to add a data source shown below:
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{addDataSource.PNG}
+    \includegraphics[width=0.95\textwidth]{addDataSource.PNG}
 \end{center}
 
 We need to select the host for the data source. There are three options:
@@ -161,19 +163,19 @@ We need to select the host for the data source. There are three options:
 After selecting the host, we need to select the data source type.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{selectDataSourceType.PNG}
+    \includegraphics[width=0.95\textwidth]{selectDataSourceType.PNG}
 \end{center}
 
 Next we will be prompted to select the data source file. 
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{selectDataSourceFile.PNG}
+    \includegraphics[width=0.95\textwidth]{selectDataSourceFile.PNG}
 \end{center}
 
 After selecting the data source file, we will be prompted to configure the Ingest Modules:
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{configureIngestModule.PNG}
+    \includegraphics[width=0.95\textwidth]{configureIngestModule.PNG}
 \end{center}
 
 Then we need to wait while Autopsy performs a basic examination of the data source and populates an embedded database with an entry for each file in the data source.
@@ -197,7 +199,7 @@ The Recent Activity module in Autopsy gathers user engagement data from web brow
 \begin{minipage}{0.5\textwidth}
   \centering
   \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.1/recent activity settings.PNG}
+    \includegraphics[width=0.95\textwidth]{3/3.1/recent activity settings.PNG}
 \end{center}
   \caption{Recent Activity Settings}
 \end{minipage}
@@ -205,7 +207,7 @@ The Recent Activity module in Autopsy gathers user engagement data from web brow
 \begin{minipage}{0.45\textwidth}
   \centering
   \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.1/Screenshot 2024-02-27 at 8.15.21 PM.png}
+    \includegraphics[width=0.95\textwidth]{3/3.1/Screenshot 2024-02-27 at 8.15.21 PM.png}
     \caption{Results of Recent Activity}
 \end{center}
 \end{minipage}
@@ -231,13 +233,13 @@ To set up custom hash sets in Autopsy, follow these steps:
 In the \textbf{Hash Sets} dialog box, you can add known or notable hash sets. Utilize known hash sets such as the NSRL Reference Data Set (RDS) to quickly identify "known" files on a disk image, saving significant time and resources during analysis. Additionally, you have the flexibility to configure known or notable hash sets using your own dataset.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.2/Hash Set Custom Configuration.png}
+    \includegraphics[width=0.95\textwidth]{3/3.2/Hash Set Custom Configuration.png}
 \end{center}
 
 \subsubsection*{Results}
 In the \textbf{Analysis Results} under \textbf{Hashset Hits}, three matches are identified for files with hash values that correspond to those found in the \textbf{HashSet1} dataset.
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.2/Results of Hash Lookup ingest module.png}
+    \includegraphics[width=0.95\textwidth]{3/3.2/Results of Hash Lookup ingest module.png}
 \end{center}
 
 \subsection{File Type Identification}
@@ -248,14 +250,14 @@ Autopsy's File Type ID module is crucial for identifying files based on their in
 In global file type identification settings, we can configure custom file type of our interst
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.3/File Type Identification Settings.png}
+    \includegraphics[width=0.95\textwidth]{3/3.3/File Type Identification Settings.png}
 \end{center}
 
 \subsubsection*{Results}
 In the File Types tab of Autopsy, the results from the \textbf{File Type} Identification module are displayed in two groups: \textbf{By Extension} and \textbf{By Mime Type}. \textbf{By Extension} groups files based on their file extensions, which may sometimes include incorrect files due to corrupted extensions. On the other hand, By Mime Type groups files based on their MIME types. Additionally, results from custom settings are shown grouped according to the specified MIME names in the \textbf{Interesting Items} tab.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.3/Custom File Type Identification Settings.png}
+    \includegraphics[width=0.95\textwidth]{3/3.3/Custom File Type Identification Settings.png}
 \end{center}
 
 \subsection{Embedded File Extractor}
@@ -265,7 +267,7 @@ The Embedded File Extractor module in Autopsy can open various archive formats s
 Each extracted file appears in the data source tree view as a subordinate of the containing archive and as an archive within the \textbf{Views} section under \textbf{File Types } and \textbf{Archives}.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.4/Embedded File Extractor Results.png}
+    \includegraphics[width=0.95\textwidth]{3/3.4/Embedded File Extractor Results.png}
 \end{center}
 
 \subsection{Extension Mismatch Detector}
@@ -275,14 +277,14 @@ The Extension Mismatch Detector module utilizes the findings from the File Type 
 Within the \lstinline{Tools > Options > File Extension Mismatch} dialog box, users have the capability to both add and remove MIME types along with their corresponding extensions.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.5/Extension Mismatch Detector Settings .png}
+    \includegraphics[width=0.95\textwidth]{3/3.5/Extension Mismatch Detector Settings .png}
 \end{center}
 
 \subsubsection*{Results}
 Results are shown in \texttt{Analysis Results > Extension Mismatch Detected}.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.5/Details of Mismatched Files.png}
+    \includegraphics[width=0.95\textwidth]{3/3.5/Details of Mismatched Files.png}
 \end{center}
 
 \subsection{Picture Analyzer}
@@ -291,21 +293,21 @@ The Picture Analyzer module in Autopsy retrieves important information from imag
 \subsubsection*{Results}
 The outcomes are displayed in the result trees.
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.6/Picture Analyzer Results.png}
+    \includegraphics[width=0.95\textwidth]{3/3.6/Picture Analyzer Results.png}
 \end{center}
 
 \subsection{Keyword Search}
 The Keyword Search module enables searching during the ingest process and also supports manual text searches post-ingest (refer to Ad Hoc Keyword Search). It extracts text from ingested files, selected reports generated by other modules, and results from other modules. Users can specify keywords to search for, add regular expressions for searching, and include keywords to exclude from the search.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.7/Keyword Search Settings.png}
+    \includegraphics[width=0.95\textwidth]{3/3.7/Keyword Search Settings.png}
 \end{center}
 
 \subsubsection*{Results}
 In the global settings options, users can incorporate custom keyword rules for searching. When this module is executed, it searches for specified keywords within files and their metadata. The search results are displayed in \texttt{Analysis Results > Keyword Hits}, grouped together by the detected keyword.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.7/Keyword Search Results Details.png}
+    \includegraphics[width=0.95\textwidth]{3/3.7/Keyword Search Results Details.png}
 \end{center}
 
 \subsection{Interesting Files Identifier}
@@ -323,7 +325,7 @@ The Interesting Files Identifier module automatically flags files and directorie
 \end{itemize}
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.8/Interesting Files Configuration.png}
+    \includegraphics[width=0.95\textwidth]{3/3.8/Interesting Files Configuration.png}
 \end{center}
 
 \subsubsection*{Results}
@@ -335,18 +337,18 @@ The Email Parser module recognizes MBOX, EML, and PST format files by their sign
 \subsubsection*{Results}
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.9/Results of Email Parser ingest module.png}
+    \includegraphics[width=0.95\textwidth]{3/3.9/Results of Email Parser ingest module.png}
 \end{center}
 
 After running the "Email Parser" ingest module, the results can be viewed in \texttt{Data Artifacts > E-mail messages}. Two email files have been identified by the module.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.9/Details of an email text version.png}
+    \includegraphics[width=0.95\textwidth]{3/3.9/Details of an email text version.png}
 \end{center}
 
 We can also see the details of a selected email in the bottom part of the result.
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.9/Email Accounts.png}
+    \includegraphics[width=0.95\textwidth]{3/3.9/Email Accounts.png}
 \end{center}
 From \texttt{Data Artifacts > Communication Accounts > Email}, we can view the email accounts that have been used in the emails identified by the module.
 
@@ -355,7 +357,7 @@ The Encryption Detection Module is created to find files that might be encrypted
 
 \subsubsection*{Results}
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.10/Results of Encryption Detection ingest module.png}
+    \includegraphics[width=0.95\textwidth]{3/3.10/Results of Encryption Detection ingest module.png}
 \end{center}
 
 After executing the "Encryption Detection" ingest module, the outcomes can be observed in \texttt{Analysis Results > Encryption Detection}. one file has been recognized as requiring a password for access.
@@ -363,14 +365,26 @@ After executing the "Encryption Detection" ingest module, the outcomes can be ob
 \subsection{PhotoRec Carver}
 The PhotoRec Carver module retrieves files from the unallocated space within the data source and sends them for further processing. This assists users in uncovering additional data about previously deleted files on the device. These files are found in areas of the device's storage that appear empty. Users can customize the module's runtime settings to choose whether to retain corrupted files and specify which file types to include or exclude.
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.11/PhotoRec Carver Settings.png}
+    \includegraphics[width=0.95\textwidth]{3/3.11/PhotoRec Carver Settings.png}
 \end{center}
 
 
 \subsubsection*{Results}
 The results of carving show up on the tree under the appropriate data source with the heading (CarvedFiles)
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{3/3.11/PhotoRec Carver Results.png}
+    \includegraphics[width=0.95\textwidth]{3/3.11/PhotoRec Carver Results.png}
+\end{center}
+
+\subsection{GPX Parsing Module: Importing and Analyzing GPS Data}
+
+In Autopsy, we utilize a GPX parser as a tool to interpret and analyze GPX files. GPX, which stands for GPS Exchange Format, is a common file format used to store GPS data such as waypoints, tracks, and routes.
+
+With our GPX parser, investigators can import GPX files collected from various sources, such as GPS devices or mobile phones, into our forensic investigation platform. Once imported, our GPX parser allows users to extract and visualize geographical data, including location coordinates, timestamps, and other metadata associated with the GPS data.
+
+This functionality enables our forensic analysts to map out movement patterns, routes, and points of interest recorded in the GPX files, providing valuable insights into the geographic context of a digital investigation. Additionally, by integrating GPX parsing capabilities, Autopsy enhances its ability to analyze and correlate GPS data with other digital evidence, facilitating comprehensive forensic examinations.
+
+\begin{center}
+    \includegraphics[width=0.95\textwidth]{GPX Parser.png}
 \end{center}
 
 \section{Specialize Views}
@@ -378,7 +392,7 @@ The results of carving show up on the tree under the appropriate data source wit
 The Image Gallery feature in Autopsy assists in investigations related to images and videos. It categorizes photos into folders and properties, simplifying the management of large collections and focusing on significant content. It allows for immediate image viewing during ingestion, eliminating the need to wait for the entire process to finish.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{4/4.1/Image Gallery.png}
+    \includegraphics[width=0.95\textwidth]{4/4.1/Image Gallery.png}
 \end{center}
 
 \subsection{Timeline}
@@ -392,11 +406,11 @@ The Timeline tool is event-based, with each event having a timestamp, category, 
 Autopsy's Timeline feature gathers and organizes data from various sources into event types, such as for File System Changes (Access, Creation, Modification, Deletion).
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{4/4.2/Timeline View-1.png}
+    \includegraphics[width=0.95\textwidth]{4/4.2/Timeline View-1.png}
 \end{center}
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{4/4.2/Timeline View-2.png}
+    \includegraphics[width=0.95\textwidth]{4/4.2/Timeline View-2.png}
 \end{center}
 
 \subsection{File Deletion and Recovery on USB Pendrives}
@@ -406,24 +420,24 @@ Autopsy's Timeline feature gathers and organizes data from various sources into 
 
 \subsubsection*{Configuring Setup for File Recovery}
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{4.3/Screenshot (414).png}
+    \includegraphics[width=0.95\textwidth]{4.3/Screenshot (414).png}
 \end{center}
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{4.3/Screenshot (415).png}
+    \includegraphics[width=0.95\textwidth]{4.3/Screenshot (415).png}
 \end{center}
 
 \subsubsection*{Results}
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{4.3/Screenshot (416).png}
+    \includegraphics[width=0.95\textwidth]{4.3/Screenshot (416).png}
 \end{center}
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{4.3/Screenshot (417).png}
+    \includegraphics[width=0.95\textwidth]{4.3/Screenshot (417).png}
 \end{center}
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{4.3/Screenshot (418).png}
+    \includegraphics[width=0.95\textwidth]{4.3/Screenshot (418).png}
 \end{center}
 
 \section{Report Generation}
@@ -434,7 +448,7 @@ When users discover something of interest, they can tag it by right-clicking on 
 If the file itself is noteworthy, users can choose the \textbf{TagFile} option. Alternatively, if the results of the analysis are significant, they can opt for the \textbf{TagResult} option.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{5/5.1/Tagging.png}
+    \includegraphics[width=0.95\textwidth]{5/5.1/Tagging.png}
 \end{center}
 
 \subsection{Tagging and Commenting}
@@ -442,24 +456,24 @@ If the file itself is noteworthy, users can choose the \textbf{TagFile} option. 
 Within Autopsy, commenting entails appending remarks and annotations to digital artifacts throughout a forensic examination. This supports documentation, collaboration, and context development among investigators, thus improving evidence organization and enhancing investigative insights and clarity. This functionality also allows for the application of multiple tags to a single file and aids in tracking the progress of the investigation.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{5/5.2/Tagging & Commenting.png}
+    \includegraphics[width=0.95\textwidth]{5/5.2/Tagging & Commenting.png}
 \end{center}
 
 \subsection{Reporting}
 The report modules enable users to extract crucial information from a case in diverse formats. This encompasses generating HTML or Excel reports containing all extracted content, keyword hits, and more from a case, as well as creating KML files from any coordinates discovered for integration into software such as Google Earth.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{5/5.3/Report Generation-1 .png}
+    \includegraphics[width=0.95\textwidth]{5/5.3/Report Generation-1 .png}
 \end{center}
 
 Utilizing the tagged files, Autopsy has the capability to generate a report encompassing comprehensive information regarding the files. These reports can be generated in various formats and accessed through the \textbf{Reports} tab.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{5/5.3/Report Generation-2 .png}
+    \includegraphics[width=0.95\textwidth]{5/5.3/Report Generation-2 .png}
 \end{center}
 and generated report is 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{5/5.3/Report Generation-3.png}
+    \includegraphics[width=0.95\textwidth]{5/5.3/Report Generation-3.png}
 \end{center}
 
 \section{Autopsy Functionality Testing}
@@ -472,7 +486,7 @@ The disk image can be downloaded from here: \href{http://prdownloads.sourceforge
 
 \subsubsection*{Outputs from Autopsy}
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{6/6.1/Extended DOS Partition.png}
+    \includegraphics[width=0.95\textwidth]{6/6.1/Extended DOS Partition.png}
 \end{center}
 
 \subsubsection*{Conclusion}
@@ -491,11 +505,11 @@ The disk image can be downloaded from here: \href{http://prdownloads.sourceforge
 
 \subsubsection*{Outputs from Autopsy}
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{6/6.2/Search Results for keyword.png}
+    \includegraphics[width=0.95\textwidth]{6/6.2/Search Results for keyword.png}
 \end{center}
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{6/6.2/Search Results for keyword _second_.png} \\
+    \includegraphics[width=0.95\textwidth]{6/6.2/Search Results for keyword _second_.png} \\
     The MD5 of the image is bac12239bd466fa6c86ceb0b0426da0a.
 \end{center}
 
@@ -512,7 +526,7 @@ The MD5 of the image is 4aeb06ecd361777242ab78735d51ace6.
 
 \subsubsection*{Outputs from Autopsy}
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{6/6.3/FTS Deleted Files.png}
+    \includegraphics[width=0.95\textwidth]{6/6.3/FTS Deleted Files.png}
 \end{center}
 
 \subsubsection*{Conclusion}
@@ -527,20 +541,20 @@ The MD5 of the image is 9bdb9c76b80e90d155806a1fc7846db5.
 
 \subsubsection*{Outputs from Autopsy}
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{6/6.4/Autopsy JPEG Search Summary.png}
+    \includegraphics[width=0.95\textwidth]{6/6.4/Autopsy JPEG Search Summary.png}
 \end{center}
 As depicted in the figure below, Autopsy demonstrates its ability to identify JPEG images within the data source, even when the file extension is inaccurate. Furthermore, in cases where a file is labeled with a JPEG extension but does not contain JPEG image data, Autopsy accurately detects the correct file type and displays it accordingly.
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{6/6.4/All JPEG Images Found by Autopsy.png}
+    \includegraphics[width=0.95\textwidth]{6/6.4/All JPEG Images Found by Autopsy.png}
 \end{center}
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{6/6.4/Detecting Images with Corrupted Extension.png}
+    \includegraphics[width=0.95\textwidth]{6/6.4/Detecting Images with Corrupted Extension.png}
 \end{center}
 
 \begin{center}
-    \includegraphics[width=0.75\textwidth]{6/6.4/Detecting Other File Types with JPEG Extension.png}
+    \includegraphics[width=0.95\textwidth]{6/6.4/Detecting Other File Types with JPEG Extension.png}
 \end{center}
 
 \subsubsection*{Conclusion}
@@ -574,11 +588,11 @@ This series of events underscores the complexity and potential errors inherent i
 \subsubsection*{Outputs from Autopsy}
 
 \begin{center}
-    \includegraphics[width=0.4\textwidth]{6/6.5/Autopsy NTFS Autodetect-1.png}
+    \includegraphics[width=.85\textwidth]{6/6.5/Autopsy NTFS Autodetect-1.png}
 \end{center}
 
 \begin{center}
-    \includegraphics[width=0.4\textwidth]{6/6.5/Autopsy NTFS Autodetect-2.png}
+    \includegraphics[width=.85\textwidth]{6/6.5/Autopsy NTFS Autodetect-2.png}
 \end{center}
 
 \subsubsection*{Conclusion}
